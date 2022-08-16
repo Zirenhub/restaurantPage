@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-font: 'Permanent Marker', cursive;
+    --main-font-color: #c9142a;
+    --main-background-color: #fddb00;
+    --text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    --box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.header-container {
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--main-background-color);
+    border: 5px solid var(--main-font-color);
+    box-shadow: var(--box-shadow);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-font-color);
+    justify-items: center;
+}
+
+.header-content p:first-of-type {
+    text-shadow: var(--text-shadow);
+    font-size: 2.5rem;
+}
+
+.header-content p:last-of-type {
+    font-style: italic;
+    color: #e12120;
+}
+
+.header-logo-button-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header-logo-container {
+    background-image: url(./img/logo-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 800px;
+    height: 100px;
+}
+
+.header-buttons {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.header-buttons:hover {
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--main-font-color);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.header-buttons:active {
+    top: 1px;
+}
+
+.header-buttons:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 40px var(--main-font-color);
+}
+
+.header-buttons:active::after {
+    box-shadow: 0 0 0 0 var(--main-font-color);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
