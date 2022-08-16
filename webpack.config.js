@@ -18,8 +18,11 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(gif|png|jpg)$/,
-        type: 'asset/inline',
+        test: /\.(jpe?g|png|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[hash][ext]',
+        },
       },
     ],
   },
