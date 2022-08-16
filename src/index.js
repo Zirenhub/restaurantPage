@@ -1,1 +1,2 @@
-console.log('this is a test');
+import pageLoad from './app/page-load';
+import './style.css';
