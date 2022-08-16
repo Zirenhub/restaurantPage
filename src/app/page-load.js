@@ -1,5 +1,9 @@
 const template = document.querySelector('#content');
 
+////////////////////////////
+//          HEADER        //
+////////////////////////////
+
 //header
 const header = document.createElement('header');
 header.classList.add('header-container');
@@ -60,3 +64,24 @@ headerLogoButtonContainer.appendChild(headerLocationButton);
 header.appendChild(headerContent);
 
 template.appendChild(header);
+
+////////////////////////////
+//          MAIN          //
+////////////////////////////
+
+const mainContent = document.createElement('div');
+mainContent.classList.add('main-container');
+
+const videoSource = document.createElement('iframe');
+videoSource.setAttribute(
+  'src',
+  'https://www.youtube.com/embed/FIQ2F3T1ydM?autoplay=1'
+);
+// videoSource.setAttribute('width', 'auto');
+// videoSource.setAttribute('height', 'auto');
+videoSource.setAttribute('frameborder', '0');
+videoSource.setAttribute('allow', 'autoplay');
+videoSource.setAttribute('autoplay', '');
+
+mainContent.appendChild(videoSource);
+template.appendChild(mainContent);
