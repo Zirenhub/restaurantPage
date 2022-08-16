@@ -16,6 +16,16 @@
     --box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
+body {
+    height: 100vh;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .header-container {
     font-family: var(--main-font);
     display: flex;
@@ -108,4 +118,15 @@
     top: 0;
     opacity: 1;
     transition: 0s;
+}
+
+.main-container {
+    flex-grow: 1;
+}
+
+.main-container > iframe {
+    display: block;
+    border: none;
+    height: 100%;
+    width: 100%;
 }
