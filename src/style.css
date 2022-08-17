@@ -12,6 +12,7 @@
     --main-font: 'Permanent Marker', cursive;
     --main-font-color: #c9142a;
     --main-background-color: #fddb00;
+    --darker-background-color: #d5b02c;
     --text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     --box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
@@ -124,9 +125,72 @@ body {
     flex-grow: 1;
 }
 
+/* main page */
+
 .main-container > iframe {
     display: block;
     border: none;
     height: 100%;
     width: 100%;
+}
+
+/* menu page */
+
+.menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+}
+
+.menu-content > * {
+    background-color:  var(--darker-background-color);
+    border: 1px solid var(--main-font-color);
+    color: var(--main-font-color);
+    font-family: var(--main-font);
+    text-align: center;
+}
+
+.menu-header {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    text-shadow: var(--text-shadow);
+    border-bottom: 2px solid var(--main-font-color);
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+}
+
+.menu-item-container {
+    font-size: 1.5rem;
+}
+
+.menu-item-container > p {
+    margin-bottom: 70px;
+    border-bottom: 2px solid rgba(201, 20, 42, 0.3);
+}
+
+/* about page */
+
+.about-container {
+    height: 100%;
+    background-color: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    align-self: center;
+    width: 90%;
+    border:1px solid var(--main-font-color);
+    background-color: var(--darker-background-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.about-content > p  {
+    padding: 20px;
+    font-size: 1.6rem;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
 }
