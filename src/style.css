@@ -186,11 +186,63 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
 }
 
 .about-content > p  {
     padding: 20px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-family: var(--main-font);
     color: var(--main-font-color);
+}
+
+.about-second-col {
+    background-image: url(./img/LosPollosHermanos.png);
+    height: 413px;
+    width: 306px;
+    justify-self: center;
+}
+
+/* location page */
+
+.location-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-background-color);
+}
+
+.location-content {
+    align-self: center;
+    width: 45%;
+    height: 60%;
+    border: 1px solid var(--main-font-color);
+    border-radius: 20px;
+    background-color: var(--darker-background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: var(--box-shadow);
+}
+
+.location-image {
+    background-image: url(./img/los-pollos-location.jpg);
+    background-size: 100% 100%;
+    border: 1px solid var(--main-font-color);
+    background-repeat: no-repeat;
+    align-self: center;
+    height: 400px;
+    width: 500px;
+    margin-left: 20px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.location-info {
+    font-family: var(--main-font);
+    align-self: center;
+    margin-left: 20px;
+    color: var(--main-font-color);
+    font-size: 1.2rem;
 }
