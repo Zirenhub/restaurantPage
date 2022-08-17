@@ -85,8 +85,8 @@ function createMainPageContent() {
     'https://www.youtube.com/embed/FIQ2F3T1ydM?autoplay=1'
   );
   videoSource.setAttribute('frameborder', '0');
-  // videoSource.setAttribute('allow', 'autoplay');
-  // videoSource.setAttribute('autoplay', '');
+  videoSource.setAttribute('allow', 'autoplay');
+  videoSource.setAttribute('autoplay', '');
 
   mainContent.appendChild(videoSource);
   template.appendChild(mainContent);
