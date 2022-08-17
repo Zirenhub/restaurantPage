@@ -1,6 +1,7 @@
 import createMainPage from './app/page-load';
 import createMenuPage from './app/menu-page';
 import createAboutPage from './app/about-page';
+import createLocationPage from './app/location-page';
 import './style.css';
 
 createMainPage();
@@ -18,6 +19,8 @@ function changeTabs(tabText) {
     createMenuPage();
   } else if (tabText === 'About') {
     createAboutPage();
+  } else {
+    createLocationPage();
   }
 }
 
